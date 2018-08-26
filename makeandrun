@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd build
+
+make
+MAKERETURN=$?
+
+echo "$STR"
+echo "Make return code: $MAKERETURN"
+
+if [ $MAKERETURN -eq 0 ]
+then
+	echo "$STR"
+	../bin/zoo
+fi
